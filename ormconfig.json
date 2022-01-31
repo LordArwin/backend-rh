@@ -1,0 +1,21 @@
+[{
+  "name": "default",
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "connectTimeout"  : 360000,
+  "acquireTimeout"  : 360000,
+  "timeout"         : 360000,
+  "username": "postgres",
+  "password": "dev",
+  "database": "rh",
+  "entities": ["./**/entities/{*.ts,*js}"],
+  "migrations": [
+    "src/database/migrations/*.ts"
+  ],
+  "cli": {
+    "entitiesDir": "src/entities",
+    "migrationsDir": "src/database/migrations",
+    "subscribersDir": "src/subscriber"
+  }
+}]
